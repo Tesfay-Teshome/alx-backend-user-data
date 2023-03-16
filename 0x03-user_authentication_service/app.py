@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""API Routes Authentication Service"""
+"""API Route for Authentication Service"""
 from auth import Auth
 from flask import (Flask,
                    jsonify,
@@ -13,7 +13,7 @@ AUTH = Auth()
 
 @app.route('/', methods=['GET'])
 def hello_world() -> str:
-    """ Base route for authentication service API """
+    """ Base routes for authentication service API """
     msg = {"message": "Bienvenue"}
     return jsonify(msg)
 
