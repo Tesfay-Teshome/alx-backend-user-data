@@ -1,15 +1,13 @@
 #!/usr/bin/env python3
-""" User Model """
+"""Class User for ORM"""
 
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-
-
 Base = declarative_base()
 
 
 class User(Base):
-    """ REpresents a record from the user table """
+    """Representation of a user """
     __tablename__ = 'users'
     id = Column(Integer, primary_key=True)
     email = Column(String(250), nullable=False)
